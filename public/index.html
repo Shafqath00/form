@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-main">
+        <div class="form-body">
+            <form action="/submit" method="post">
+                <div class="in">
+                    <p>Name:</p>
+                    <input type="text" name="name" id="name" required placeholder="Enter you name...">
+                </div>
+                <div class="in">
+                    <p>Email:</p>
+                    <input type="email" name="mail" id="mail" required placeholder="Enter you email...">
+                </div>
+                <div class="in">  
+                    <p>Number:</p>
+                    <input type="text" name="number" maxlength="10" pattern="\d{10}" title="Please enter exactly 10 digits" required placeholder="Enter you email..." />
+                </div>
+                <div class="in">
+                    <p>City:</p>
+                    <input type="text" name="city" required placeholder="Enter you city...">
+                </div>
+                <div class="txt">
+                    <p>Text:</p>
+                    <textarea name="texts" id="" required></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="submit" id="submit">
+                </div>
+            </form>
+        </div>
+        <div class="sub-after" id="btn-sub">
+            <div>
+                <h1>Thanks for submit</h1>
+                <button type="submit" id="ok-btn" >ok</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const sub = document.getElementById("submit");
+        const btn = document.getElementById("ok-btn");
+        const btn_sub = document.getElementById("btn-sub");
+        sub.addEventListener('click',()=>{
+            btn_sub.classList.add("sub-active");
+        })
+        btn.addEventListener('click',()=>{
+            btn_sub.classList.remove("sub-active");
+        })
+    </script>
+</body>
+</html>
