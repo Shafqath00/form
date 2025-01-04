@@ -58,3 +58,8 @@ button{
 .sub-active{
     display: block;
 }
+@media only screen and (max-width:430px){
+    .form-body{
+        width: 300px;
+    }
+}
